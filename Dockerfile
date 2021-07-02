@@ -10,8 +10,8 @@ RUN pip install -r /requirements.txt
 # Setup directory structure
 RUN mkdir /app
 WORKDIR /app
-COPY ./app/ /app
+VOLUME [ "/app" ]
 
-CMD [ "python", "-m", "django", "startproject", "lapp"]
+CMD [ "python", "manage.py", "runserver", "0.0.0.0:8000"]
 # RUN adduser -D user
 # USER user
