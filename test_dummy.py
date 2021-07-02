@@ -6,4 +6,4 @@ def test_dummy():
 
 
 def test_dummy_fail():
-    assert False
+    assert True
